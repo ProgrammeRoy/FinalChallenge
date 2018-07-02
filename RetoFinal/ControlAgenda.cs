@@ -21,7 +21,7 @@ namespace RetoFinal
     {
       Limpiar();
       Console.WriteLine("Nuevo contacto: ");
-      Contactos contacto = new Contactos;
+      Contactos contacto = new Contactos();
       Console.WriteLine("Nombre: ");
       contacto.Nombre = Console.ReadLine();
       Console.WriteLine("Telefono");
@@ -98,7 +98,7 @@ namespace RetoFinal
     }
 
     //Acerda del autor
-    public void AcercaDe()
+    public static void AcercaDe()
     {
       Limpiar();
       Console.WriteLine("Propietario: Roy Martínez Ramírez");
