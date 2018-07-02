@@ -81,7 +81,7 @@ namespace RetoFinal
       Array.Copy(_contactos, ordenados, _index);
       Array.Sort(ordenados);
 
-      Console.WriteLine(ordenados); //Corregir problema
+      Console.WriteLine(CadenaContactos(ordenados));
     }
 
     //Método muestra los contactos Ordenados de forma descendente
@@ -93,7 +93,7 @@ namespace RetoFinal
       Array.Sort(ordenados);
       Array.Reverse(ordenados);
 
-      Console.WriteLine(ordenados); //Corregir problema
+      Console.WriteLine(CadenaContactos(ordenados));
     }
 
     //Método para buscar por nombre
@@ -109,6 +109,33 @@ namespace RetoFinal
       return null;
     }
 
+    //Sobreescritura de toString, servirá para mostrar los datos de los contactos ordenados
+    private string CadenaContactos(Contactos[] contactos)
+    {
+      //Concatena los datos de manera ópotima
+      StringBuilder sb = new StringBuilder();
+      for (int i = 0; i < _index; i++)
+      {
+        if(_contactos[i] == null) { continue; }
 
+        string dato = string.Format("{0}. {1}", i++, contactos[i]);
+        sb.AppendLine(dato);
+      }
+
+      //itera todos los elementos, los convierte en cadena y los muestra
+      return sb.ToString();
+    }
+
+    //Sobreescribe la cadena
+    public override string ToString()
+    {
+      return CadenaContactos(_contactos); 
+    }
+
+    //Una forma de poner nombre más coherente a toString, imprime el ToString
+    public void MostrarContactos()
+    {
+      Console.WriteLine(this);
+    }
   }
 }
