@@ -19,9 +19,6 @@ namespace RetoFinal
       Console.WriteLine("6. Salir");
       Console.WriteLine("Seleccionar una opción");
 
-      Contactos C1 = new Contactos("Juan", 985875487, "juan@tumail.com");
-      Contactos C2 = new Contactos("Elio", 965465252, "elio@tumail.com");
-      Console.WriteLine(C1.ToString());
     }
   }
 }

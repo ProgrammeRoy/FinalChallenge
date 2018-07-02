@@ -32,7 +32,7 @@ namespace RetoFinal
     }
 
     //Método agregar contacto
-    public void AgregarContactoa(Contactos contacto)
+    public void AgregarContacto(Contactos contacto)
     {
       if (_index < TAM)
       {
