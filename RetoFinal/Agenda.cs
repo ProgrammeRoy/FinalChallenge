@@ -118,7 +118,7 @@ namespace RetoFinal
       {
         if(_contactos[i] == null) { continue; }
 
-        string dato = string.Format("{0}. {1}", i++, contactos[i]);
+        string dato = string.Format("{0}. {1}", i+1, contactos[i]);
         sb.AppendLine(dato);
       }
 
