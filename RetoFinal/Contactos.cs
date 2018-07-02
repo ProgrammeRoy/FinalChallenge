@@ -9,12 +9,12 @@ namespace RetoFinal
   class Contactos: IComparable<Contactos>
   {
     public string Nombre { get; set; }
-    public int Telefono { get; set; }
+    public string Telefono { get; set; }
     public string Correo { get; set; }
 
     public Contactos(){ }
 
-    public Contactos(string nombre, int telefono, string correo)
+    public Contactos(string nombre, string telefono, string correo)
     {
       Nombre = nombre;
       Telefono = telefono;
